@@ -10,8 +10,28 @@
 
 <body>
   <head>
-     
+     <input type="text" id="busca" placeholder="Pesquise a tarefa...">
   </head>
+  
+  <main>
+    <section id="tarefas">
+      <h2>Tarefas <button>nova tarefa</button></h2>
+      <h6>Nenhuma tarefa registrada</h6>
+    </section>
+    
+    <section id="overlay">
+      <div class="modal">
+        <form>
+          <h3>Criar tarefa</h3>
+          <label for="titulo">Titulo</label>
+          <input type="text" id="titulo">
+          <label foor="descricao">Descrição</label>
+          <textarea id="descricao"></textarea>
+          <button>Criar</button>
+        </form>
+      </div>
+    </section>
+  </main>
   
   <script src="script.js"></script>
 </body>
