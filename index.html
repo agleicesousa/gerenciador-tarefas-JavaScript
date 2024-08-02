@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<html lange="pt-br">
+<html lang="pt-br">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -9,30 +9,30 @@
 </head>
 
 <body>
-  <head>
-     <input type="text" id="busca" placeholder="Pesquise a tarefa...">
-  </head>
-  
+  <header>
+    <input type="text" id="busca" placeholder="Pesquise a tarefa...">
+  </header>
+
   <main>
     <section id="tarefas">
-      <h2>Tarefas <button>nova tarefa</button></h2>
+      <h2>Tarefas <button id="nova-tarefa">nova tarefa</button></h2>
       <h6>Nenhuma tarefa registrada</h6>
     </section>
-    
+
     <section id="overlay">
       <div class="modal">
         <form>
           <h3>Criar tarefa</h3>
-          <label for="titulo">Titulo</label>
+          <label for="titulo">Título</label>
           <input type="text" id="titulo">
-          <label foor="descricao">Descrição</label>
+          <label for="descricao">Descrição</label>
           <textarea id="descricao"></textarea>
-          <button>Criar</button>
+          <button type="submit">Criar</button>
         </form>
       </div>
     </section>
   </main>
-  
+
   <script src="script.js"></script>
 </body>
 
