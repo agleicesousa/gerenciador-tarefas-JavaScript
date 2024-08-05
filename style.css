@@ -19,7 +19,7 @@ body {
 
 header {
   background-color: blueviolet;
-  padding: 16px;
+  padding: 16px 120px;
   display: flex;
   justify-content: center;
 }
@@ -28,8 +28,8 @@ header input {
   width: 100%;
   max-width: 600px;
   height: 50px;
-  padding: 0 15px;
-  border-radius: 25px;
+  padding: 0 10px;
+  border-radius: 8px;
   border: none;
   font-size: 16px;
   outline: none;
@@ -37,26 +37,27 @@ header input {
 
 /* Estilo principal para a área de tarefas */
 #tarefas {
-  padding: 24px 16px;
+  padding: 60px 120px;
 }
 
 #tarefas h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 24px;
+  font-size: 48px;
   color: #333;
   margin-bottom: 16px;
 }
 
 #tarefas h2 button {
-  height: 40px;
+  height: 46px;
   background-color: blueviolet;
   color: white;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0 20px;
+  letter-spacing: .75px; /*apagar depois */
+  padding: 0 26px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -69,8 +70,8 @@ header input {
 
 #tarefas h6 {
   text-align: center;
-  font-size: 18px;
-  color: #666;
+  font-size: 24px;
+  color: #999;
 }
 
 /* Estilo para o overlay e modal */
@@ -85,14 +86,20 @@ header input {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s ease, opacity 0.3s ease;
+  transition-duration: 200ms;
+}
+
+#overlay.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .modal {
-  width: 90%;
-  max-width: 500px;
+  width: 400px;
+  /* max-width: 500px; */
   background-color: white;
-  padding: 24px;
-  border-radius: 8px;
+  padding: 16px;
+  border-radius: 10px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -102,6 +109,7 @@ header input {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s ease, opacity 0.3s ease;
+  transition-duration: 200ms;
 }
 
 .modal.active {
@@ -110,23 +118,26 @@ header input {
 }
 
 .modal form h3 {
-  font-size: 20px;
-  margin-bottom: 16px;
-  color: #333;
+  font-size: 24px;
+  margin-bottom: 26px;
+  color: #999;
 }
 
 .modal form label {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  letter-spacing: .75px;
+  text-transform: uppercase;
 }
 
 .modal form input,
 .modal form textarea {
   width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  height: 46px;
+  border: 2px solid #DEDEDE;
+  border-radius: 5px;
   margin-bottom: 16px;
   padding: 10px;
   transition: border-color 0.3s ease;
@@ -138,7 +149,8 @@ header input {
 }
 
 .modal form textarea {
-  height: 100px;
+  padding-top: 10px;
+  height: 120px;
 }
 
 .modal form button {
@@ -157,50 +169,4 @@ header input {
 
 .modal form button:hover {
   background-color: rgb(108, 34, 177);
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
-  header {
-    padding: 16px 8px;
-  }
-
-  header input {
-    max-width: 100%;
-  }
-
-  #tarefas {
-    padding: 24px 8px;
-  }
-
-  #tarefas h2 {
-    font-size: 20px;
-  }
-
-  #tarefas h2 button {
-    height: 36px;
-    font-size: 12px;
-  }
-
-  #tarefas h6 {
-    font-size: 16px;
-  }
-
-  .modal {
-    width: 90%;
-    padding: 16px;
-  }
-
-  .modal form h3 {
-    font-size: 18px;
-  }
-
-  .modal form input,
-  .modal form textarea {
-    height: 40px;
-  }
-
-  .modal form button {
-    height: 40px;
-  }
 }
